@@ -26,8 +26,16 @@ if (sessionStorage.getItem('Logged')) {
         }
     }
 
-    const header = document.createElement('header')
-    document.body.appendChild(header)
+    const header = document.createElement('header');
+    document.body.appendChild(header);
+
+    const buttonExit = document.createElement('button');
+    buttonExit.innerHTML = 'Sair';
+    buttonExit.onclick = () => {
+        sessionStorage.removeItem('Logged');
+        window.location.href = '../index.html';
+    }
+    header.appendChild(buttonExit)
 
     const container = document.createElement('section');
     document.body.appendChild(container);
@@ -191,8 +199,15 @@ if (sessionStorage.getItem('Logged')) {
         const position = document.createElement('p');
         position.textContent = player.posicao;
         containerCard.appendChild(position);
+
+        containerCard.addEventListener('click', () => {
+            localStorage.setItem('playerData', JSON.stringify(player));
+            window.location.href = `../details/details.html?id=${player.id}`;
+        });
     };
 
+    loadData('https://botafogo-atletas.mange.li/2024-1/all');
+
 } else {
-    window.location.href = '../Index.html';
+    window.location.href = '../index.html';
 }
