@@ -81,7 +81,7 @@ if (sessionStorage.getItem('Logged')) {
         const buttonBack = document.createElement('button');
         buttonBack.innerHTML = 'Voltar';
         buttonBack.onclick = () => {
-            window.location.href = '../main/main.html';
+            window.location.href = '../main.html';
         }
         textContainer.appendChild(buttonBack)
 

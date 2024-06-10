@@ -9,7 +9,7 @@ document.getElementById("Enviar").onclick = () => {
     if (hex_sha256(permission + increment) === target){
         message.innerHTML = "Bem-vindo!";
         sessionStorage.setItem("Logged", "1");
-        window.location.href = "../main/main.html";
+        window.location.href = "../main.html";
     } else {
         message.innerHTML = "SENHA INCORRETA!"
     }

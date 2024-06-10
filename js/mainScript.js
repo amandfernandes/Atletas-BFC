@@ -37,6 +37,9 @@ if (sessionStorage.getItem('Logged')) {
     }
     header.appendChild(buttonExit)
 
+    const containerFilter = document.createElement('div')
+    document.body.appendChild(containerFilter)
+
     const container = document.createElement('section');
     document.body.appendChild(container);
 
@@ -174,7 +177,7 @@ if (sessionStorage.getItem('Logged')) {
     };
 
     const buttonPosition = document.createElement('div');
-    header.appendChild(buttonPosition);
+    containerFilter.appendChild(buttonPosition);
     buttonPosition.appendChild(buttonPositionAll);
     buttonPosition.appendChild(buttonGoleiro);
     buttonPosition.appendChild(buttonAtacante);
@@ -202,7 +205,7 @@ if (sessionStorage.getItem('Logged')) {
 
         containerCard.addEventListener('click', () => {
             localStorage.setItem('playerData', JSON.stringify(player));
-            window.location.href = `../details/details.html?id=${player.id}`;
+            window.location.href = `../details.html?id=${player.id}`;
         });
     };
 

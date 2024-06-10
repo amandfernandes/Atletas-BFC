@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Preto - Cor principal do Botafogo */
+    color: #FFFFFF; /* Branco - Cor do texto */
+}
+
+header {
+    background-color: #000000; /* Preto - Cor principal do Botafogo */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Oswald', serif;
+    font-size: 2em;
+    margin: 0;
+    color: #FFFFFF; /* Branco - Cor do texto */
+}
+
+div {
+    background-color: #000000; /* Preto - Cor principal do Botafogo */
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Centraliza os botões verticalmente */
+    text-align: center; /* Centraliza o texto dentro dos botões */
+}
+
+button {
+    background-color: #FFFFFF; /* Branco - Cor do botão */
+    color: #000000; /* Preto - Cor do texto do botão */
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #181818; /* Vermelho - Cor secundária do Botafogo */
+    color: #FFFFFF;
+}
+
+section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout responsivo */
+    gap: 20px;
+}
+
+article {
+    border: 1px solid #FFFFFF; /* Branco - Borda do card */
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #111111; /* Preto - Cor do card */
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+article:hover {
+    background-color: #181818; /* Vermelho - Cor secundária do Botafogo */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h3 {
+    font-family: 'Oswald', serif;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #FFFFFF; /* Branco - Cor do texto */
+}
+
+p {
+    margin: 5px 0;
+    color: #FFFFFF; /* Branco - Cor do texto */
+}
+
+/* Estilos específicos para telas menores */
+@media screen and (max-width: 768px) {
+    button {
+        display: block; /* Botões em blocos para ocupar toda a largura */
+        margin-bottom: 10px;
+    }
+
+    /* Layout de uma coluna para telas menores */
+    section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos específicos para telas maiores */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Layout de duas colunas para telas médias */
+    section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    /* Layout de quatro colunas para telas grandes */
+    section {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
