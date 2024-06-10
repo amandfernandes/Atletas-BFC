@@ -33,7 +33,7 @@ if (sessionStorage.getItem('Logged')) {
     buttonExit.innerHTML = 'Sair';
     buttonExit.onclick = () => {
         sessionStorage.removeItem('Logged');
-        window.location.href = '../index.html';
+        window.location.href = 'index.html';
     }
     header.appendChild(buttonExit)
 
@@ -205,12 +205,12 @@ if (sessionStorage.getItem('Logged')) {
 
         containerCard.addEventListener('click', () => {
             localStorage.setItem('playerData', JSON.stringify(player));
-            window.location.href = `../details.html?id=${player.id}`;
+            window.location.href = `details.html?id=${player.id}`;
         });
     };
 
     loadData('https://botafogo-atletas.mange.li/2024-1/all');
 
 } else {
-    window.location.href = '../index.html';
+    window.location.href = 'index.html';
 }

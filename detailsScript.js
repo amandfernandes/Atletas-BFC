@@ -81,7 +81,7 @@ if (sessionStorage.getItem('Logged')) {
         const buttonBack = document.createElement('button');
         buttonBack.innerHTML = 'Voltar';
         buttonBack.onclick = () => {
-            window.location.href = '../main.html';
+            window.location.href = 'main.html';
         }
         textContainer.appendChild(buttonBack)
 
@@ -89,11 +89,11 @@ if (sessionStorage.getItem('Logged')) {
         buttonExit.innerHTML = 'Sair';
         buttonExit.onclick = () => {
             sessionStorage.removeItem('Logged');
-            window.location.href = '../index.html';
+            window.location.href = 'index.html';
         }
         textContainer.appendChild(buttonExit)
         };
 
 } else {
-    window.location.href = '../index.html';
+    window.location.href = 'index.html';
 }
