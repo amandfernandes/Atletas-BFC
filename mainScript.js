@@ -212,5 +212,24 @@ if (sessionStorage.getItem('Logged')) {
     loadData('https://botafogo-atletas.mange.li/2024-1/all');
 
 } else {
-    window.location.href = 'index.html';
+    document.body.innerHTML = '';
+
+    let warningContent = document.getElementById('warning');
+    if (!warningContent) {
+        warningContent = document.createElement('div');
+        warningContent.id = 'warning';
+        document.body.appendChild(warningContent);
+    }
+
+    document.body.appendChild(warningContent)
+    const message = document.createElement('h1');
+    message.innerHTML = 'Faça o Login para acessar esta página.';
+    warningContent.appendChild(message);
+
+    const buttonLogin = document.createElement('button');
+    buttonLogin.innerHTML = 'Login';
+    buttonLogin.onclick = () => {
+        window.location.href = 'index.html'; 
+    };
+    warningContent.appendChild(buttonLogin);
 }

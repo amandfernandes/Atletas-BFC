@@ -89,6 +89,23 @@ p {
     color: #FFFFFF; /* Branco - Cor do texto */
 }
 
+#warning {
+    background-color: transparent;  
+    padding: 20px; 
+    position: absolute; /* Posiciona o elemento em relação ao body */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza a div */
+    text-align: center;
+    flex-direction: column;
+}
+  
+  #warning h1 {
+    font-family: 'Oswald', serif;
+    font-weight: lighter;
+    margin-bottom: 10px; /* Espaço entre o parágrafo e o botão */
+  }
+
 /* Estilos específicos para telas menores */
 @media screen and (max-width: 768px) {
     button {
@@ -100,14 +117,28 @@ p {
     section {
         grid-template-columns: 1fr;
     }
+
+    /* Estilos responsivos para botões do buttonPosition */
+  #buttonPosition button {
+    font-size: 0.5em; /* Diminui o tamanho da fonte */
+    padding: 5px 5px; /* Diminui o padding */
+    margin: 0 3px; /* Diminui a margem */
+  }
 }
 
 /* Estilos específicos para telas maiores */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) {
     /* Layout de duas colunas para telas médias */
     section {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* Estilos responsivos para botões do buttonPosition */
+  #buttonPosition button {
+    font-size: 1em; /* Tamanho da fonte padrão */
+    padding: 10px 10px; /* Padding padrão */
+    margin: 0 5px; /* Margem padrão */
+  }
 }
 
 @media screen and (min-width: 1025px) {
